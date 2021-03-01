@@ -90,3 +90,19 @@
 // ----------  ----------
 // 4           kim
 // 5           sam
+// sqlite> select name from teachers where id != 1 or 2 or 4;
+// name
+// ----------
+// fred
+// pamela
+// beth
+// sunny
+// sqlite>
+// sqlite> select name from teachers where department = 1 or 4;
+// name
+// ----------
+// fred
+// pamela
+// beth
+// sunny
+// sqlite>
