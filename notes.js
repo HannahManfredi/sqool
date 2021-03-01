@@ -106,3 +106,11 @@
 // beth
 // sunny
 // sqlite>
+// sqlite> select department from teachers where name = 'sunny';
+// department
+// ----------
+// 2
+// sqlite> select name from departments where id = 2;
+// name
+// ----------
+// psy
