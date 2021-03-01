@@ -82,3 +82,11 @@
 // beth
 // sunny
 // sqlite>
+// Aside from the comparison operators above, you can also use the LIKE keyword, in conjunction with the % wildcard symbol to select rows based on patterns you write. % will match 0 or more of any character. Using NOT LIKE instead of LIKE will select rows that do not match the pattern.
+// SELECT name FROM CLASSES
+//   WHERE name LIKE 'c%';
+// select * from students where name like '%m';
+// id          name
+// ----------  ----------
+// 4           kim
+// 5           sam
