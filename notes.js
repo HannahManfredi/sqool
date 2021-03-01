@@ -114,3 +114,51 @@
 // name
 // ----------
 // psy
+
+// INNER JOINS NOT WORKING:
+// sqlite> select teachers.name, teachers.id from teachers;
+// name        id
+// ----------  ----------
+// fred        1
+// pamela      2
+// beth        3
+// sunny       4
+// sqlite> select teachers.name, teachers.id from teachers inner join departments on teachers.department = departments.id;
+// name        id
+// ----------  ----------
+// fred        1
+// pamela      2
+// beth        3
+// sunny       4
+// sqlite> select teachers.name, teachers.id from teachers inner join departments on departments.id = teachers.department;
+// name        id
+// ----------  ----------
+// fred        1
+// pamela      2
+// beth        3
+// sunny       4
+// sqlite> select * from teachers;
+// id          name        department
+// ----------  ----------  ----------
+// 1           fred        1
+// 2           pamela      2
+// 3           beth        1
+// 4           sunny       2
+// sqlite> select * from departments;
+// id          name
+// ----------  ----------
+// 1           cs
+// 2           psy
+// sqlite> select teachers.name from teachers inner join departments on departments.id = teachers.department;
+// name
+// ----------
+// fred
+// pamela
+// beth
+// sunny
+// sqlite> select departments.name from departments inner join teachers on teachers.name = 'sunny';
+// name
+// ----------
+// cs
+// psy
+// sqlite>
