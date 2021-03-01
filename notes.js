@@ -61,3 +61,24 @@
 
 // department is a foreign key and references primary key in departments schema
 //beth is from the cs dept.
+// SELECT <column-name> FROM <table-name>
+//   WHERE <some-condition-to-limit-by>;
+// A simple condition-to-limit-by is a value for a given column. You can evaluate this value using =, !=, <, >, <=, and >=, amongst others. Chain togeher your conditions using AND and OR, which behave logically as you are used to from your work with JavaScript.
+// SELECT * FROM teachers
+//   WHERE department = 1 OR department = 2;
+// select name from students where name != 'naomi';
+// name
+// ----------
+// lauren
+// dan
+// kim
+// sam
+// chris
+// sqlite>
+// sqlite> select name department from teachers where id > 2 or name = 'fred';
+// department
+// ----------
+// fred
+// beth
+// sunny
+// sqlite>
